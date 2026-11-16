@@ -1,0 +1,6 @@
+node_modules/
+.venv/
+models/
+out/
+*.mp4
+.claude/skills/lab06-collect/
