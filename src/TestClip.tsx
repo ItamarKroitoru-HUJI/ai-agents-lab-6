@@ -1,7 +1,7 @@
 import { AbsoluteFill, Audio, interpolate, staticFile, useCurrentFrame } from "remotion";
 
 // Running average of a fixed coin-flip sequence, drifting toward 0.5.
-const FLIPS = Array.from({ length: 150 }, (_, i) => ((i * 7919) % 13 < 6.5 ? 1 : 0));
+const FLIPS: number[] = Array.from({ length: 150 }, (_, i) => ((i * 7919) % 13 < 6.5 ? 1 : 0));
 const AVERAGES = FLIPS.map((_, i) => FLIPS.slice(0, i + 1).reduce((a, b) => a + b, 0) / (i + 1));
 
 export const TestClip: React.FC = () => {
