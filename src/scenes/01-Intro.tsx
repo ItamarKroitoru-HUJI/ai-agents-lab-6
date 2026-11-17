@@ -1,7 +1,7 @@
-import { AbsoluteFill, Audio, interpolate, spring, staticFile, useCurrentFrame } from "remotion";
+import { AbsoluteFill, Audio, interpolate, Sequence, spring, staticFile, useCurrentFrame } from "remotion";
 import { COLORS, FONT, FPS, seconds } from "../theme";
 
-export const INTRO_FRAMES = seconds(8);
+export const INTRO_FRAMES = seconds(9.5);
 
 // Seeded PRNG so every render shows the same flips.
 const mulberry32 = (seed: number) => () => {
@@ -79,6 +79,10 @@ export const Intro: React.FC = () => {
   return (
     <AbsoluteFill style={{ backgroundColor: COLORS.bg, color: COLORS.text, fontFamily: FONT }}>
       <Audio src={staticFile("narration/intro.wav")} />
+      {/* Name the topic out loud as the title appears. */}
+      <Sequence from={T.title} layout="none">
+        <Audio src={staticFile("narration/intro-title.wav")} />
+      </Sequence>
       <svg width={1280} height={720} style={{ position: "absolute", top: 0, left: 0 }}>
         {/* Phase 1: one coin flips and lands. */}
         <g opacity={coinOpacity}>

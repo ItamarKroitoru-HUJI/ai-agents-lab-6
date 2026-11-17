@@ -1,5 +1,6 @@
 {
   "intro": "Flip one coin, and anything can happen. Flip a thousand, and the outcome is almost certain. Why?",
+  "intro-title": "This is the weak law of large numbers.",
   "motivation-hoops": "Can a ninety percent shooter miss three free throws in a row? Sure. One shot is luck. But over a season, they hit close to ninety percent.",
   "motivation-track": "On the race track, one lap is fast and the next is slow. Yet the average lap barely moves.",
   "motivation-why": "Why?",

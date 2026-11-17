@@ -1,13 +1,13 @@
 # The Weak Law of Large Numbers: script
 
 Goal: after the video, a viewer understands why the sample average converges to μ.
-Length: about 115 seconds, with 0.6-second cross-fades between scenes. The hard limit is 2 minutes.
+Length: about 116 seconds, with 0.6-second cross-fades between scenes. The hard limit is 2 minutes.
 
 Story: intro, motivation, simple example, formal definition, real-life applications.
 
 | # | id | part | seconds | file |
 |---|---|---|---|---|
-| 1 | intro | Intro | 8 | `src/scenes/01-Intro.tsx` |
+| 1 | intro | Intro | 9.5 | `src/scenes/01-Intro.tsx` |
 | 2 | motivation | Motivation | 20 | `src/scenes/02-Motivation.tsx` |
 | 3 | coins | Simple example | 14 | `src/scenes/03-Coins.tsx` |
 | 4 | spread | Simple example | 15 | `src/scenes/04-Spread.tsx` |
@@ -18,9 +18,9 @@ Story: intro, motivation, simple example, formal definition, real-life applicati
 
 Narration text lives in `narration/lines.json`. CI turns each line into `public/narration/<id>.wav`.
 
-## 1. intro, 8 s
+## 1. intro, 9.5 s
 - On screen: one coin flips and lands on a random side. Then a grid of many small coins appears. A big "?" fades in.
-- Title at the end: "The Weak Law of Large Numbers".
+- Title at the end: "The Weak Law of Large Numbers". The narrator names it as it appears.
 
 ## 2. motivation, 20 s
 - Basketball: balls arc toward a hoop at a 90% make rate. Three misses come early.
@@ -67,6 +67,7 @@ Motivation is split in three clips, so each one starts with its own visuals.
 | Clip | Narration |
 |---|---|
 | intro | Flip one coin, and anything can happen. Flip a thousand, and the outcome is almost certain. Why? |
+| intro-title | This is the weak law of large numbers. |
 | motivation-hoops | Can a ninety percent shooter miss three free throws in a row? Sure. One shot is luck. But over a season, they hit close to ninety percent. |
 | motivation-track | On the race track, one lap is fast and the next is slow. Yet the average lap barely moves. |
 | motivation-why | Why? |
