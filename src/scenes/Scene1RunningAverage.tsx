@@ -1,6 +1,6 @@
 import { AbsoluteFill, Audio, interpolate, staticFile, useCurrentFrame } from "remotion";
 
-const N = 400;
+const N = 1000;
 const MU = 0.5;
 const PLOT = { left: 120, right: 1180, top: 160, bottom: 600 };
 
@@ -11,7 +11,7 @@ const mulberry32 = (seed: number) => () => {
   t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
   return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
 };
-const rand = mulberry32(7);
+const rand = mulberry32(205);
 const AVERAGES: number[] = [];
 let heads = 0;
 for (let i = 1; i <= N; i++) {
@@ -50,8 +50,8 @@ export const Scene1RunningAverage: React.FC = () => {
         <polyline points={points} fill="none" stroke="#38bdf8" strokeWidth={4} strokeLinejoin="round" />
         <circle cx={x(shown)} cy={y(AVERAGES[shown - 1])} r={8} fill="#38bdf8" />
         <text x={PLOT.right} y={y(MU) - 16} fill="#f59e0b" fontSize={32} textAnchor="end" opacity={muOpacity}>μ = 0.5</text>
-        <text x={PLOT.right} y={PLOT.bottom + 48} fill="#e2e8f0" fontSize={28} textAnchor="end">
-          n = {shown}   average = {AVERAGES[shown - 1].toFixed(3)}
+        <text x={PLOT.right} y={PLOT.bottom + 48} fill="#e2e8f0" fontSize={28} textAnchor="end" style={{ whiteSpace: "pre" }}>
+          {`n = ${shown}    average = ${AVERAGES[shown - 1].toFixed(3)}`}
         </text>
       </svg>
     </AbsoluteFill>
