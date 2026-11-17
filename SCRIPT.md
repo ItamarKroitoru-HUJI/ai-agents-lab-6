@@ -44,8 +44,9 @@ Narration text lives in `narration/lines.json`. CI turns each line into `public/
 ## 6. proof, 20 s
 - Line 1: E[X̄ₙ] = μ.
 - Line 2: Var(X̄ₙ) = σ²/n.
-- Line 3: Chebyshev. P(|X̄ₙ − μ| > ε) ≤ σ²/(nε²).
-- Line 4: the bound → 0 as n → ∞. A small plot of 1/n falling to 0.
+- Line 3: the Chebyshev chain, with stacked fractions, revealed one step at a time.
+  P(|X̄ₙ − μ| > ε) ≤ Var(X̄ₙ)/ε² = (σ²/n)/ε² = σ²/(nε²) → 0.
+- A small plot of 1/n falls to 0 as the chain reaches → 0.
 
 ## 7. applications, 20 s
 Four cards appear one by one, each with a simple drawn icon:
@@ -57,3 +58,21 @@ Four cards appear one by one, each with a simple drawn icon:
 ## 8. outro, 7 s
 - "One flip is chaos. Many flips follow a law."
 - The final formula: X̄ₙ → μ.
+
+## Final narration
+
+The spoken text, exactly as Kokoro reads it. It is copied from `narration/lines.json`.
+Motivation is split in three clips, so each one starts with its own visuals.
+
+| Clip | Narration |
+|---|---|
+| intro | Flip one coin, and anything can happen. Flip a thousand, and the outcome is almost certain. Why? |
+| motivation-hoops | Can a ninety percent shooter miss three free throws in a row? Sure. One shot is luck. But over a season, they hit close to ninety percent. |
+| motivation-track | On the race track, one lap is fast and the next is slow. Yet the average lap barely moves. |
+| motivation-why | Why? |
+| coins | Here is a fair coin. Heads counts as one. Watch the running average as n grows. Ten flips. A thousand. A million. As n goes to infinity, it locks onto one half. |
+| spread | Now repeat the experiment many times. With ten flips, the averages spread widely. With one hundred, they cluster. With one thousand, they pile up tightly around one half. |
+| definition | Here is the weak law. Take independent samples with mean mu. For any small epsilon, the chance that the average misses mu by epsilon goes to zero. |
+| proof | Why is it true? The average has expected value mu. Its variance is sigma squared over n. Chebyshev says the chance of missing by epsilon is at most sigma squared over n epsilon squared. As n grows, that bound goes to zero. |
+| applications | This law runs the real world. Casinos rely on a small house edge over millions of bets. Insurers price policies from average claims. Pollsters estimate opinions from samples. Monte Carlo methods estimate hard numbers by averaging random trials. |
+| outro | One flip is chaos. Many flips follow a law. That is the weak law of large numbers. |
