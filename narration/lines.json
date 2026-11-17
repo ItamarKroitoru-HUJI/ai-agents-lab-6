@@ -1,6 +1,8 @@
 {
   "intro": "Flip one coin, and anything can happen. Flip a thousand, and the outcome is almost certain. Why?",
-  "motivation": "Can a ninety percent shooter miss three free throws in a row? Sure. One shot is luck. But over a season, they hit close to ninety percent. On the race track, one lap is fast and the next is slow. Yet the average lap barely moves. Why?",
+  "motivation-hoops": "Can a ninety percent shooter miss three free throws in a row? Sure. One shot is luck. But over a season, they hit close to ninety percent.",
+  "motivation-track": "On the race track, one lap is fast and the next is slow. Yet the average lap barely moves.",
+  "motivation-why": "Why?",
   "coins": "Here is a fair coin. Heads counts as one. Watch the running average as n grows. Ten flips. A thousand. A million. As n goes to infinity, it locks onto one half.",
   "spread": "Now repeat the experiment many times. With ten flips, the averages spread widely. With one hundred, they cluster. With one thousand, they pile up tightly around one half.",
   "definition": "Here is the weak law. Take independent samples with mean mu. For any small epsilon, the chance that the average misses mu by epsilon goes to zero.",

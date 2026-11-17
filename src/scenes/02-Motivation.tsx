@@ -1,4 +1,4 @@
-import { AbsoluteFill, Audio, interpolate, spring, staticFile, useCurrentFrame } from "remotion";
+import { AbsoluteFill, Audio, interpolate, Sequence, spring, staticFile, useCurrentFrame } from "remotion";
 import { COLORS, FONT, FPS, seconds } from "../theme";
 
 export const MOTIVATION_FRAMES = seconds(20);
@@ -777,7 +777,14 @@ export const Motivation: React.FC = () => {
 
   return (
     <AbsoluteFill style={{ backgroundColor: COLORS.bg, color: COLORS.text, fontFamily: FONT }}>
-      <Audio src={staticFile("narration/motivation.wav")} />
+      {/* One clip per part, so each line starts with its visuals. */}
+      <Audio src={staticFile("narration/motivation-hoops.wav")} />
+      <Sequence from={T.p2In} layout="none">
+        <Audio src={staticFile("narration/motivation-track.wav")} />
+      </Sequence>
+      <Sequence from={T.why} layout="none">
+        <Audio src={staticFile("narration/motivation-why.wav")} />
+      </Sequence>
       <AbsoluteFill style={{ opacity: fade }}>
         {p1 > 0 ? (
           <AbsoluteFill style={{ opacity: p1 }}>
