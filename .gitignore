@@ -4,3 +4,4 @@ models/
 out/
 *.mp4
 .claude/skills/lab06-collect/
+public/narration/
