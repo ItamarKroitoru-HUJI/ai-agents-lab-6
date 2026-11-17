@@ -22,9 +22,9 @@ for (let i = 1; i <= N; i++) {
 const x = (n: number) => PLOT.left + ((n - 1) / (N - 1)) * (PLOT.right - PLOT.left);
 const y = (avg: number) => PLOT.bottom - avg * (PLOT.bottom - PLOT.top);
 
-export const SCENE1_FRAMES = 300;
+export const COINS_FRAMES = 300;
 
-export const Scene1RunningAverage: React.FC = () => {
+export const Coins: React.FC = () => {
   const frame = useCurrentFrame();
   const shown = Math.max(1, Math.round(interpolate(frame, [20, 240], [1, N], {
     extrapolateLeft: "clamp",
@@ -36,7 +36,7 @@ export const Scene1RunningAverage: React.FC = () => {
 
   return (
     <AbsoluteFill style={{ backgroundColor: "#0f172a", color: "white", fontFamily: "sans-serif" }}>
-      <Audio src={staticFile("narration/scene1.wav")} />
+      <Audio src={staticFile("narration/coins.wav")} />
       <h1 style={{ textAlign: "center", fontSize: 52, marginTop: 40, opacity: titleOpacity }}>
         Average of n coin flips
       </h1>
