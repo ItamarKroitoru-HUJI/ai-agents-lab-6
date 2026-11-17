@@ -27,7 +27,7 @@ const mulberry32 = (seed: number) => () => {
 
 type Dot = { x: number; y: number; inside: boolean };
 const DOT_COUNT = 800;
-const rand = mulberry32(314);
+const rand = mulberry32(954);
 const DOTS: Dot[] = [];
 for (let i = 0; i < DOT_COUNT; i++) {
   const x = rand();

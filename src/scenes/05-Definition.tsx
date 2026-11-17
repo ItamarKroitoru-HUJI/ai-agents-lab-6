@@ -106,7 +106,7 @@ export const Definition: React.FC = () => {
       </div>
 
       <div style={{ ...centered, top: 250, fontSize: 48, fontFamily: MATH, ...reveal(frame, T_STATEMENT) }}>
-        P(|<XBar /> − <Mu />| ≥ ε) → 0 as n → ∞
+        P(|<XBar /> − <Mu />| &gt; ε) → 0 as n → ∞
       </div>
 
       <svg width={1280} height={720} style={{ position: "absolute", top: 0, left: 0, opacity: lineOpacity }}>

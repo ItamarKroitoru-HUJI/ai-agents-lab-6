@@ -1,7 +1,7 @@
 {
   "intro": "Flip one coin, and anything can happen. Flip a thousand, and the outcome is almost certain. Why?",
-  "motivation": "A casino loses single bets, yet it never loses over a year. A poll of one thousand people predicts millions of votes. Both rely on one idea. Averages of many random trials become predictable.",
-  "coins": "Here is a fair coin. Heads counts as one. Watch the running average. It wobbles at first, then settles at one half.",
+  "motivation": "Can a ninety percent shooter miss three free throws in a row? Sure. One shot is luck. But over a season, they hit close to ninety percent. On the race track, one lap is fast and the next is slow. Yet the average lap barely moves. Why?",
+  "coins": "Here is a fair coin. Heads counts as one. Watch the running average as n grows. Ten flips. A thousand. A million. As n goes to infinity, it locks onto one half.",
   "spread": "Now repeat the experiment many times. With ten flips, the averages spread widely. With one hundred, they cluster. With one thousand, they pile up tightly around one half.",
   "definition": "Here is the weak law. Take independent samples with mean mu. For any small epsilon, the chance that the average misses mu by epsilon goes to zero.",
   "proof": "Why is it true? The average has expected value mu. Its variance is sigma squared over n. Chebyshev says the chance of missing by epsilon is at most sigma squared over n epsilon squared. As n grows, that bound goes to zero.",
